@@ -81,8 +81,10 @@ In the ``make_map_fn``, each data field should consist of the following
    ``extract_solution`` function. **NOTED** that the implementation of
    the corresponding reward function should align with this extracted
    ``ground_truth``.
-5. ``extra_info``: Record some information of the current prompt. Not
-   use for now.
+5. ``extra_info``: Record auxiliary information of the current prompt. It can
+   include fields such as ``index`` or ``expected_structure`` which will be
+   exposed in the ``non_tensor_batch`` of the resulting ``DataProto`` as
+   ``expected_schema``.
 
 .. code:: python
 
